@@ -37,5 +37,6 @@ WantedBy=multi-user.target
 EOF
 
 systemctl daemon-reload
+systemctl enable touchinjector
 systemctl start touchinjector
 echo "Started touch gestures"
