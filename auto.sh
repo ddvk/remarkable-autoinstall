@@ -5,11 +5,11 @@ mkdir -p $APPDIR
 mkdir -p ~/.config/draft
 mkdir -p ~/scripts
 
-wget "$REPOURL/master/apps/draft" -O $APPDIR/
-wget "$REPOURL/master/apps/edit" -O $APPDIR/
-wget "$REPOURL/master/apps/touchinjector" -O $APPDIR/
-wget "$REPOURL/master/scripts/swipeup.sh" -O ~/scripts/
-wget "$REPOURL/master/.config/draft/03-edit" -O ~/.config/draft/
+wget "$REPOURL/master/apps/draft" -O $APPDIR/draft
+wget "$REPOURL/master/apps/edit" -O $APPDIR/edit
+wget "$REPOURL/master/apps/touchinjector" -O $APPDIR/touchinjector
+wget "$REPOURL/master/scripts/swipeup.sh" -O ~/scripts/swipeup.sh
+wget "$REPOURL/master/.config/draft/03-edit" -O ~/.config/draft/03-edit
 
 cat << EOF > /etc/systemd/system/touchinjector.service 
 [Unit]
