@@ -29,8 +29,6 @@ After=home.mount
 [Service]
 Environment=HOME=/home/root
 ExecStart=$APPDIR/touchinjector
-Restart=on-failure
-WatchdogSec=60
 
 [Install]
 WantedBy=multi-user.target
