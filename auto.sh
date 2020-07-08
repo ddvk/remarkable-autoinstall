@@ -4,6 +4,7 @@ REPOURL="https://raw.githubusercontent.com/ddvk/remarkable-autoinstall"
 mkdir -p $APPDIR
 mkdir -p ~/.config/draft
 mkdir -p ~/scripts
+mkdir -p ~/edit
 
 systemctl stop touchinjector || true
 echo "Downloading files..."
