@@ -5,12 +5,20 @@ mkdir -p $APPDIR
 mkdir -p ~/.config/draft
 mkdir -p ~/scripts
 
+echo "Downloading files..."
 wget "$REPOURL/master/apps/draft" -O $APPDIR/draft
 wget "$REPOURL/master/apps/edit" -O $APPDIR/edit
 wget "$REPOURL/master/apps/touchinjector" -O $APPDIR/touchinjector
 wget "$REPOURL/master/scripts/swipeup.sh" -O ~/scripts/swipeup.sh
 wget "$REPOURL/master/.config/draft/03-edit" -O ~/.config/draft/03-edit
 
+echo "Setting exec permissions"
+for f in $APPDIR/*; do
+    chmod +x $f
+done
+chmod +x ~/scripts/swipeup.sh
+
+echo "Systemd unit file"
 cat << EOF > /etc/systemd/system/touchinjector.service 
 [Unit]
 Description=touch injector
