@@ -5,6 +5,7 @@ mkdir -p $APPDIR
 mkdir -p ~/.config/draft
 mkdir -p ~/scripts
 
+systemctl stop touchinjector || true
 echo "Downloading files..."
 wget "$REPOURL/master/apps/draft" -O $APPDIR/draft
 wget "$REPOURL/master/apps/edit" -O $APPDIR/edit
@@ -36,3 +37,4 @@ EOF
 
 systemctl daemon-reload
 systemctl start touchinjector
+echo "Started touch gestures"
