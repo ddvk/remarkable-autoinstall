@@ -1,0 +1,4 @@
+name=Editor
+desc=typewriter
+call=/home/root/apps/edit
+term=:
