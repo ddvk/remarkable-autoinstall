@@ -18,6 +18,6 @@ if [ -f $DRAFT_PID ]; then
     systemctl start xochitl
 else
     systemctl stop xochitl
-    ~/draft &
+    ~/apps/draft &
     echo $! > $DRAFT_PID
 fi
