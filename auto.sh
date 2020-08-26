@@ -10,15 +10,15 @@ systemctl stop touchinjector || true
 echo "Downloading files..."
 wget "$REPOURL/master/scripts/swipeup.sh" -O ~/scripts/swipeup.sh
 
-apps=(draft edit touchinjector fingerterm)
-for app in $apps
+apps=( draft edit touchinjector fingerterm )
+for app in "${apps[@]}"
 do
     wget "$REPOURL/master/apps/$app" -O $APPDIR/$app
 done
 
 echo "Downloading draft configs..."
-cfgs=(03-edit 05-fingerterm)
-for cfg in $cfgs
+cfgs=( 03-edit 05-fingerterm )
+for cfg in "${cfgs[@]}"
 do
     wget "$REPOURL/master/.config/draft/$cfg" -O ~/.config/draft/$cfg
 done
