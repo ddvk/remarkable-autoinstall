@@ -1,5 +1,5 @@
 set -e
-APPDIR=/home/root/apps
+APPDIR=${APPDIR:-/home/root/apps}
 REPOURL="https://raw.githubusercontent.com/ddvk/remarkable-autoinstall"
 mkdir -p $APPDIR
 mkdir -p ~/.config/draft
@@ -8,11 +8,20 @@ mkdir -p ~/edit
 
 systemctl stop touchinjector || true
 echo "Downloading files..."
-wget "$REPOURL/master/apps/draft" -O $APPDIR/draft
-wget "$REPOURL/master/apps/edit" -O $APPDIR/edit
-wget "$REPOURL/master/apps/touchinjector" -O $APPDIR/touchinjector
 wget "$REPOURL/master/scripts/swipeup.sh" -O ~/scripts/swipeup.sh
-wget "$REPOURL/master/.config/draft/03-edit" -O ~/.config/draft/03-edit
+
+apps=(draft edit touchinjector fingerterm)
+for app in $apps
+do
+    wget "$REPOURL/master/apps/$app" -O $APPDIR/$app
+done
+
+echo "Downloading draft configs..."
+cfgs=(03-edit 05-fingerterm)
+for cfg in $cfgs
+do
+    wget "$REPOURL/master/.config/draft/$cfg" -O ~/.config/draft/$cfg
+done
 
 echo "Setting exec permissions"
 for f in $APPDIR/*; do
