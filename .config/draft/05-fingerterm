@@ -1,4 +1,4 @@
 name=fingerterm
-desc=relink
+desc=fingerterm
 call=~/apps/fingerterm --login
 term=:
