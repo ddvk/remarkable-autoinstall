@@ -34,7 +34,7 @@ export STARDICT_DATA_DIR="data/dict"
 # export external font directory
 export EXT_FONT_DIR="/home/root/ttf;/usr/Share/fonts/ttf;/usr/share/fonts/opentype"
 
-./reader.lua "/home/root"
+./reader.lua
 
 killall remarkable-shutdown
 systemctl reset-failed xochitl
