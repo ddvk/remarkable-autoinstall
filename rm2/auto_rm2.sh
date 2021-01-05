@@ -24,7 +24,7 @@ wget "$REPOURL/scripts/swipeup.sh" -O ~/scripts/swipeup.sh
 wget "$REPOURL/scripts/ko.sh" -O ~/scripts/ko.sh
 
 chmod +x ~/scripts/swipeup.sh
-chmod +x ~/scripts//ko.sh
+chmod +x ~/scripts/ko.sh
 chmod +x ~/apps/touchinjector
 
 
