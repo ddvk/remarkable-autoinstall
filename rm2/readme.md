@@ -25,8 +25,8 @@ You can compile the touchinjector from source: https://github.com/ddvk/remarkabl
 
 To remove it and koreader, remove the touch service
 ```
-systemctl stop touch
-rm /etc/systemd/system/touch.service
+systemctl stop touchinjector
+rm /etc/systemd/system/touchinjector.service
 rm -fr apps
 rm -fr scripts
 ```
