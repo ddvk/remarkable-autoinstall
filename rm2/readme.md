@@ -1,4 +1,4 @@
-# Quick and dirty KOReader
+# Quick and dirty KOReader toggler
 
 ## Install
 
@@ -7,4 +7,4 @@ sh -c "$(wget https://raw.githubusercontent.com/ddvk/remarkable-autoinstall/mast
 ```
 
 ## Usage
-Long swip up to switch
+Long swipe up to switch to KOReader (exit or swipe up to go back)
