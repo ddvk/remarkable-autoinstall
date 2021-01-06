@@ -17,12 +17,22 @@ if [ ! -d "$APPDIR/koreader" ]; then
     unzip /tmp/koreader.zip -d $APPDIR
 fi
 
-wget "$RM2FBREPO/librm2fb_client.so.1.0.0" -O ~/librm2fb_client.so.1.0.0
-wget "$RM2FBREPO/librm2fb_server.so.1.0.0" -O ~/librm2fb_server.so.1.0.0
-wget "$REPOURL/apps/touchinjector" -O ~/apps/touchinjector
-wget "$REPOURL/scripts/swipeup.sh" -O ~/scripts/swipeup.sh
-wget "$REPOURL/scripts/ko.sh" -O ~/scripts/ko.sh
+if [ ! -d "~/librm2fb_client.so.1.0.0" ]; then
+    wget "$RM2FBREPO/librm2fb_client.so.1.0.0" -O ~/librm2fb_client.so.1.0.0
+fi
 
+if [ ! -d "~/librm2fb_server.so.1.0.0" ]; then
+    wget "$RM2FBREPO/librm2fb_server.so.1.0.0" -O ~/librm2fb_server.so.1.0.0
+fi
+if [ ! -d "~/apps/touchinjector" ]; then
+    wget "$REPOURL/apps/touchinjector" -O ~/apps/touchinjector
+fi
+if [ ! -d "~/scripts/swipeup.sh" ]; then
+    wget "$REPOURL/scripts/swipeup.sh" -O ~/scripts/swipeup.sh
+fi
+if [ ! -d "~/scripts/ko.sh" ]; then
+    wget "$REPOURL/scripts/ko.sh" -O ~/scripts/ko.sh
+fi
 chmod +x ~/scripts/swipeup.sh
 chmod +x ~/scripts/ko.sh
 chmod +x ~/apps/touchinjector
