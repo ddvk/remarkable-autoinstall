@@ -12,7 +12,9 @@ Long swipe up (from bottom to top) to switch to KOReader (exit or swipe up to go
 
 ### Notes
 
-As mention, just a quick and easy hack. Currently using a nightly build of koreader
+As mentioned, just a quick and easy hack. Currently using a nightly build of koreader
+
+Don't use it together with the rm2fb package from toltec  
 
 
 For a more streamlined solution you can use toltec, once this has been merged
