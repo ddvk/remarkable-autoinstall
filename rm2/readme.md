@@ -1,4 +1,4 @@
-# Quick and dirty KOReader toggler
+# Quick and dirty reMarkable2 KOReader toggler
 
 ## Install
 
@@ -7,7 +7,7 @@ sh -c "$(wget https://raw.githubusercontent.com/ddvk/remarkable-autoinstall/mast
 ```
 
 ## Usage
-Long swipe up to switch to KOReader (exit or swipe up to go back)
+Long swipe up (from bottom to top) to switch to KOReader (exit or swipe up to go back)
 
 
 ### Notes
@@ -30,3 +30,12 @@ rm /etc/systemd/system/touchinjector.service
 rm -fr apps
 rm -fr scripts
 ```
+
+### Troubleshooting
+For the logs
+```
+systemctl status touchinjector
+journalctl -u touchinjector
+```
+
+to just test if it is staring: `~/scripts/ko.sh`
