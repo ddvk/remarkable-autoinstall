@@ -1,6 +1,6 @@
 # A simple installer for several apps (for reMarkable 1)
 
-## for reMarkable2 check (./rm2)
+## for reMarkable2 [check this](rm2)
 
 ## Install
 
