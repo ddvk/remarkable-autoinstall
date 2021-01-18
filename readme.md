@@ -1,4 +1,6 @@
-# A simple installer for several apps
+# A simple installer for several apps (for reMarkable 1)
+
+## for reMarkable2 check [rm2]
 
 ## Install
 
