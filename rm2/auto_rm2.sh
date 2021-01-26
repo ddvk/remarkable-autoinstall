@@ -2,7 +2,7 @@ set -e
 APPDIR=${APPDIR:-/home/root/apps}
 REPOURL="https://raw.githubusercontent.com/ddvk/remarkable-autoinstall/master/rm2"
 RM2FBREPO="https://github.com/ddvk/remarkable2-framebuffer/releases/download/v0.0.2"
-KOREADER="http://build.koreader.rocks/download/nightly/v2020.12-113-g183e0a2_2021-01-13/koreader-remarkable-v2020.12-113-g183e0a2_2021-01-13.zip"
+KOREADER="https://build.koreader.rocks/download/nightly/v2020.12-127-g9f4e745_2021-01-21/koreader-remarkable-v2020.12-127-g9f4e745_2021-01-21.zip"
 
 mkdir -p $APPDIR
 mkdir -p ~/scripts
