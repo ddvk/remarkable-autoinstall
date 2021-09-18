@@ -1,8 +1,8 @@
 set -e
 APPDIR=${APPDIR:-/home/root/apps}
 REPOURL="https://raw.githubusercontent.com/ddvk/remarkable-autoinstall/master/rm2"
-RM2FBREPO="https://github.com/ddvk/remarkable2-framebuffer/releases/download/v0.0.2"
-KOREADER="https://github.com/koreader/koreader/releases/download/v2021.01.1/koreader-remarkable-v2021.01.1.zip"
+RM2FBREPO="https://github.com/ddvk/remarkable2-framebuffer/releases/download/v0.0.6"
+KOREADER="https://github.com/koreader/koreader/releases/download/v2021.07/koreader-remarkable-v2021.07.zip"
 
 mkdir -p $APPDIR
 mkdir -p ~/scripts
@@ -17,12 +17,12 @@ if [ ! -d "$APPDIR/koreader" ]; then
     unzip /tmp/koreader.zip -d $APPDIR
 fi
 
-if [ ! -d "~/librm2fb_client.so.1.0.0" ]; then
-    wget "$RM2FBREPO/librm2fb_client.so.1.0.0" -O ~/librm2fb_client.so.1.0.0
+if [ ! -d "~/librm2fb_client.so.1.0.1" ]; then
+    wget "$RM2FBREPO/librm2fb_client.so.1.0.1" -O ~/librm2fb_client.so.1.0.1
 fi
 
-if [ ! -d "~/librm2fb_server.so.1.0.0" ]; then
-    wget "$RM2FBREPO/librm2fb_server.so.1.0.0" -O ~/librm2fb_server.so.1.0.0
+if [ ! -d "~/librm2fb_server.so.1.0.1" ]; then
+    wget "$RM2FBREPO/librm2fb_server.so.1.0.1" -O ~/librm2fb_server.so.1.0.1
 fi
 if [ ! -d "~/apps/touchinjector" ]; then
     wget "$REPOURL/apps/touchinjector" -O ~/apps/touchinjector
