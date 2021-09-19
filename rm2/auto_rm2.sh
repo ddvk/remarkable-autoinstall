@@ -38,11 +38,17 @@ chmod +x ~/scripts/ko.sh
 chmod +x ~/apps/touchinjector
 
 
+echo "udev rule"
+cat << EOF > /lib/udev/rules.d/15-systemd-input.rules
+ACTION=="add", SUBSYSTEM=="input", TAG+="systemd"
+EOF
+
 echo "Systemd unit file"
 cat << EOF > /etc/systemd/system/touchinjector.service
 [Unit]
 Description=touch injector
-After=home.mount
+Requires=dev-input-event0.device dev-input-event1.device dev-input-event2.device
+After=xochitl.service opt.mount dev-input-event0.device dev-input-event1.device dev-input-event2.device
 
 [Service]
 Environment=HOME=/home/root
