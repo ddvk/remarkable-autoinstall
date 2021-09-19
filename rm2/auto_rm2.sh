@@ -61,6 +61,5 @@ EOF
 echo "Starting the touch service..."
 systemctl daemon-reload
 systemctl enable touchinjector
-systemctl start touchinjector
-
-echo "Started touch gestures, you can long swipe up to switch to koreader"
+#systemctl start touchinjector
+echo "Reboot the device"
